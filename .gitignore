@@ -1,4 +1,10 @@
 boost_1_69_0
-Project/Debug
-Project/Project1/Debug
-Project/Test
+Project1/Debug
+Project1/Project1/Debug
+Project1/test
+Project1/Project1/test
+*.filters
+*.user
+*.opensdf
+*.sdf
+*.suo
