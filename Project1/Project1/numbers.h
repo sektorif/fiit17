@@ -1,5 +1,7 @@
 #include <string>
 
+
+
 using namespace std;
 
 string string_from_int(int number)
@@ -71,4 +73,69 @@ string string_from_int(int number)
 	}
 
 	return answer;
+}
+
+string number_less_100_to_string (int number)
+{
+	int a;
+	string answer;
+	if (number/10 ==2)
+	{
+		a = number%10;
+		if (a==0) answer = "הגאהצאעü";
+		else 
+			answer = "הגאהצאעü "+string_from_int(a);
+	}
+	if (number/10 ==3)
+	{
+		a = number%10;
+		if (a==0) answer = "ענטהצאעü";
+		else 
+			answer = "ענטהצאעü "+string_from_int(a);
+	}
+	if (number/10 ==4)
+	{
+		a = number%10;
+		if (a==0) answer = "סמנמך";
+		else 
+			answer = "סמנמך "+string_from_int(a);
+	}
+	if (number/10 ==5)
+	{
+		a = number%10;
+		if (a==0) answer = "ןÿעüהוסÿע";
+		else 
+			answer = "ןÿעüהוסÿע "+string_from_int(a);
+	}
+	if (number/10 ==6)
+	{
+		a = number%10;
+		if (a==0) answer = "רוסעüהוסÿע";
+		else 
+			answer = "רוסעüהוסÿע "+string_from_int(a);
+	}
+	if (number/10 ==7)
+	{
+		a = number%10;
+		if (a==0) answer = "סולüהוסÿע";
+		else 
+			answer = "סולüהוסÿעü "+string_from_int(a);
+	}
+	if (number/10 ==8)
+	{
+		a = number%10;
+		if (a==0) answer = "גמסולüהוסÿע";
+		else 
+			answer = "גמסולüהוסÿעü "+string_from_int(a);
+	}
+	if (number/10 ==9)
+	{
+		a = number%10;
+		if (a==0) answer = "הוגÿםמסעמ";
+		else 
+			answer = "הוגÿםמסעמ "+string_from_int(a);
+	}
+	  
+    return answer;
+
 }

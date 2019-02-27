@@ -1,10 +1,10 @@
 #ifdef TEST
 #define BOOST_TEST_MODULE example
 
-
 #include <boost/test/included/unit_test.hpp>
-
 #include "numbers.h"
+
+
 
 BOOST_AUTO_TEST_SUITE( test_suite1 )
 
@@ -32,8 +32,25 @@ BOOST_AUTO_TEST_CASE( test_case1 )
 		BOOST_TEST(string_from_int(18) == string ("восемнадцать"));
 		BOOST_TEST(string_from_int(19) == string ("девятнадцать"));
 
-
 	}
+
+BOOST_AUTO_TEST_CASE( test_case2 )
+	{
+		int check;
+		cin>>check;
+
+		BOOST_TEST(number_less_100_to_string(20) == string ("двадцать"));
+		BOOST_TEST(number_less_100_to_string(30) == string ("тридцать"));
+		BOOST_TEST(number_less_100_to_string(40) == string ("сорок"));
+		BOOST_TEST(number_less_100_to_string(50) == string ("пятьдесят"));
+		BOOST_TEST(number_less_100_to_string(60) == string ("шестьдесят"));
+		BOOST_TEST(number_less_100_to_string(70) == string ("семьдесят"));
+		BOOST_TEST(number_less_100_to_string(80) == string ("восемьдесят"));
+		BOOST_TEST(number_less_100_to_string(90) == string ("девяносто"));
+		BOOST_TEST(number_less_100_to_string(91) == string ("девяносто"));
+
+		
+	}	
 
 BOOST_AUTO_TEST_SUITE_END()
 #endif
