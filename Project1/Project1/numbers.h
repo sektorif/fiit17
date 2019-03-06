@@ -135,7 +135,43 @@ string number_less_100_to_string (int number)
 		else 
 			answer = "девяносто "+string_from_int(a);
 	}
-	  
     return answer;
 
+}
+
+string objects_less_100_to_string(int number, 
+    string s1, string s2, string s3)
+{
+	string answer;
+
+	if (number <15)
+	{
+		if (number==1)
+			answer = string_from_int(number)+ s1;
+		if ((number>1)&&(number<5))
+			answer = string_from_int(number)+ s2;
+		if (number>4)
+			answer = string_from_int(number)+ s3;
+	}
+	else
+	{
+	if (number%10 ==1)
+	{
+
+		answer = number_less_100_to_string(number)+ s1;
+	}
+	if ((number%10 >1)&&(number%10 <5))
+	{
+		answer = number_less_100_to_string(number)+ s2;
+	}
+	if (number%10 >4)
+	{
+		answer =number_less_100_to_string(number)+  s3;
+	}
+	if (number%10 ==0)
+	{
+		answer =number_less_100_to_string(number)+  s3;
+	}
+	}
+    return answer;
 }

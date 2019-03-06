@@ -36,18 +36,32 @@ BOOST_AUTO_TEST_CASE( test_case1 )
 
 BOOST_AUTO_TEST_CASE( test_case2 )
 	{
-		int check;
-		cin>>check;
 
 		BOOST_TEST(number_less_100_to_string(20) == string ("двадцать"));
 		BOOST_TEST(number_less_100_to_string(30) == string ("тридцать"));
-		BOOST_TEST(number_less_100_to_string(40) == string ("сорок"));
+		BOOST_TEST(number_less_100_to_string(41) == string ("сорок один"));
 		BOOST_TEST(number_less_100_to_string(50) == string ("п€тьдес€т"));
 		BOOST_TEST(number_less_100_to_string(60) == string ("шестьдес€т"));
 		BOOST_TEST(number_less_100_to_string(70) == string ("семьдес€т"));
 		BOOST_TEST(number_less_100_to_string(80) == string ("восемьдес€т"));
 		BOOST_TEST(number_less_100_to_string(90) == string ("дев€носто"));
-		BOOST_TEST(number_less_100_to_string(91) == string ("дев€носто"));
+		BOOST_TEST(number_less_100_to_string(91) == string ("дев€носто один"));
+
+		
+	}
+
+BOOST_AUTO_TEST_CASE( test_case3 )
+	{
+
+		BOOST_TEST(objects_less_100_to_string(20," рубль"," рубл€"," рублей") == string ("двадцать рублей"));
+		BOOST_TEST(objects_less_100_to_string(1," рубль"," рубл€"," рублей") == string ("один рубль"));
+		BOOST_TEST(objects_less_100_to_string(2," рубль"," рубл€"," рублей") == string ("два рубл€"));
+		BOOST_TEST(objects_less_100_to_string(5," рубль"," рубл€"," рублей") == string ("п€ть рублей"));
+		BOOST_TEST(objects_less_100_to_string(41," рубль"," рубл€"," рублей") == string ("сорок один рубль"));
+		BOOST_TEST(objects_less_100_to_string(52," рубль"," рубл€"," рублей") == string ("п€тьдес€т два рубл€"));
+		BOOST_TEST(objects_less_100_to_string(96," рубль"," рубл€"," рублей") == string ("дев€носто шесть рублей"));
+		BOOST_TEST(objects_less_100_to_string(86," рубль"," рубл€"," рублей") == string ("восемьдес€т шесть рублей"));
+		BOOST_TEST(objects_less_100_to_string(11," рубль"," рубл€"," рублей") == string ("одиннадцать рублей"));
 
 		
 	}	
