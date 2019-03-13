@@ -175,3 +175,60 @@ string objects_less_100_to_string(int number,
 	}
     return answer;
 }
+
+
+string currency_to_string(
+    int integer_value, string si1, string si2, string si3,
+    int decimal_value, string sd1, string sd2, string sd3)
+{
+	string answer1,answer2,answer;
+
+	if (integer_value <15)
+	{
+		if (integer_value==1)
+			answer1 = string_from_int(integer_value)+ si1;
+		if ((integer_value>1)&&(integer_value<5))
+			answer1 = string_from_int(integer_value)+ si2;
+		if (integer_value>4)
+			answer1 = string_from_int(integer_value)+ si3;
+	}
+	else
+	{
+	if (integer_value%10 ==1)
+	{
+		answer1 = number_less_100_to_string(integer_value)+ si1;
+	}
+	if ((integer_value%10 >1)&&(integer_value%10 <5))
+	{
+		answer1 = number_less_100_to_string(integer_value)+ si2;
+	}
+	if (integer_value%10 >4)
+	{
+		answer1 =number_less_100_to_string(integer_value)+  si3;
+	}
+	if (integer_value%10 ==0)
+	{
+		answer1 =number_less_100_to_string(integer_value)+  si3;
+	}}
+
+
+	if (decimal_value%10 ==1)
+	{
+		answer2 = number_less_100_to_string(decimal_value)+ sd1;
+	}
+	if ((decimal_value%10 >1)&&(decimal_value%10 <5))
+	{
+		answer2 = number_less_100_to_string(decimal_value)+ sd2;
+	}
+	if (decimal_value%10 >4)
+	{
+		answer2 =number_less_100_to_string(decimal_value)+  sd3;
+	}
+	if (decimal_value%10 ==0)
+	{
+		answer2 =number_less_100_to_string(decimal_value)+  sd3;
+	}
+	answer= answer1+answer2;
+
+    return answer;
+}

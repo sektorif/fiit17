@@ -60,11 +60,34 @@ BOOST_AUTO_TEST_CASE( test_case3 )
 		BOOST_TEST(objects_less_100_to_string(41," рубль"," рубля"," рублей") == string ("сорок один рубль"));
 		BOOST_TEST(objects_less_100_to_string(52," рубль"," рубля"," рублей") == string ("пятьдесят два рубля"));
 		BOOST_TEST(objects_less_100_to_string(96," рубль"," рубля"," рублей") == string ("девяносто шесть рублей"));
-		BOOST_TEST(objects_less_100_to_string(86," рубль"," рубля"," рублей") == string ("восемьдесят шесть рублей"));
 		BOOST_TEST(objects_less_100_to_string(11," рубль"," рубля"," рублей") == string ("одиннадцать рублей"));
 
-		
+	
 	}	
+
+BOOST_AUTO_TEST_CASE( test_case4 )
+	{
+
+		BOOST_TEST(objects_less_100_to_string(20," рубль"," рубля"," рублей") == string ("двадцать рублей"));
+		BOOST_TEST(objects_less_100_to_string(1," рубль"," рубля"," рублей") == string ("один рубль"));
+		BOOST_TEST(objects_less_100_to_string(2," рубль"," рубля"," рублей") == string ("два рубля"));
+		BOOST_TEST(objects_less_100_to_string(5," рубль"," рубля"," рублей") == string ("пять рублей"));
+		BOOST_TEST(objects_less_100_to_string(41," рубль"," рубля"," рублей") == string ("сорок один рубль"));
+		BOOST_TEST(objects_less_100_to_string(52," рубль"," рубля"," рублей") == string ("пятьдесят два рубля"));
+		BOOST_TEST(objects_less_100_to_string(96," рубль"," рубля"," рублей") == string ("девяносто шесть рублей"));
+		BOOST_TEST(objects_less_100_to_string(11," рубль"," рубля"," рублей") == string ("одиннадцать рублей"));
+
+	}	
+
+BOOST_AUTO_TEST_CASE( test_case5 )
+	{
+
+		BOOST_TEST(currency_to_string(25," рубль, "," рубля, "," рублей, ",96," копейка"," копейки"," копеек") == string ("двадцать пять рублей, девяносто шесть копеек"));
+		BOOST_TEST(currency_to_string(43," рубль, "," рубля, "," рублей, ",51," копейка"," копейки"," копеек") == string ("сорок три рубля, пятьдесят один копейка"));
+		BOOST_TEST(currency_to_string(52," рубль, "," рубля, "," рублей, ",37," копейка"," копейки"," копеек") == string ("пятьдесят два рубля, тридцать семь копеек"));
+
+	}	
+
 
 BOOST_AUTO_TEST_SUITE_END()
 #endif
