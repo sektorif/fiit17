@@ -139,6 +139,79 @@ string number_less_100_to_string (int number)
 
 }
 
+string number_less_1000_to_string(int number)
+{
+int a;
+	string answer;
+	if (number/100 ==1)
+	{
+		a = number%100;
+		if (a==0) answer = "сто";
+		else 
+			answer = "сто "+string_from_int(a);
+	}
+	if (number/100 ==2)
+	{
+		a = number%100;
+		if (a==0) answer = "двести";
+		else 
+			answer = "двести "+string_from_int(a);
+	}
+
+	if (number/100 ==3)
+	{
+		a = number%10;
+		if (a==0) answer = "триста";
+		else 
+			answer = "триста "+string_from_int(a);
+	}
+	if (number/100 ==4)
+	{
+		a = number%100;
+		if (a==0) answer = "четыреста";
+		else 
+			answer = "четыреста "+string_from_int(a);
+	}
+	if (number/100 ==5)
+	{
+		a = number%100;
+		if (a==0) answer = "пятьсот";
+		else 
+			answer = "пятьсот "+string_from_int(a);
+	}
+	if (number/100 ==6)
+	{
+		a = number%100;
+		if (a==0) answer = "шестьсот";
+		else 
+			answer = "шестьсот "+string_from_int(a);
+	}
+	if (number/100 ==7)
+	{
+		a = number%100;
+		if (a==0) answer = "семьсот";
+		else 
+			answer = "семьсот "+string_from_int(a);
+	}
+	if (number/100 ==8)
+	{
+		a = number%100;
+		if (a==0) answer = "восемьсот";
+		else 
+			answer = "восемьсот "+string_from_int(a);
+	}
+	if (number/100 ==9)
+	{
+		a = number%100;
+		if (a==0) answer = "девятьсот";
+		else 
+			answer = "девятьсот "+string_from_int(a);
+	}
+    return answer;
+}
+
+
+
 string objects_less_100_to_string(int number, 
     string s1, string s2, string s3)
 {
